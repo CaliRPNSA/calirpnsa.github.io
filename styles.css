@@ -67,8 +67,20 @@ footer p {
     line-height: 80px;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 .page-content {
     margin: 30px;
+}
+
+.page-content h1 {
+    margin-bottom: 30px;
+}
+
+.page-content p {
+    margin-bottom: 40px;
 }
 
 .home-content #home-description {
@@ -77,7 +89,7 @@ footer p {
     font-size: 0.75em;
 }
 
-.global-header {
+.global-topic-header {
     width: 100%;
     padding-top: 45px;
     padding-bottom: 45px;
@@ -85,7 +97,7 @@ footer p {
     background-size: cover;
 }
 
-.global-header h1 {
+.global-topic-header h1 {
     user-select: none;
     font-family: 'Teko', sans-serif !important;
     font-size: 4em;
