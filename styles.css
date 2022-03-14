@@ -67,7 +67,7 @@ footer p {
     line-height: 80px;
 }
 
-.description-content {
+.page-content {
     margin: 30px;
 }
 
@@ -147,6 +147,10 @@ footer p {
     width: 50%;
 }
 
+#app-body-text {
+    text-align: center;
+}
+
 .cyber-stuff {
     margin: 50px;
 }
@@ -165,6 +169,7 @@ footer p {
 
 #proc-header {
     text-decoration: underline;
+    text-align: center;
 }
 
 #name {
