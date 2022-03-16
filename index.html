@@ -17,10 +17,28 @@
     <body>
         <div style="width: 40%; margin: auto; margin-top: 100px; text-align: center;">
             <h1 style="font-family: 'Teko', sans-serif; font-weight: 600">This site is currently unavailable</h1>
-            <p style="font-family: 'Teko', sans-serif; font-weight: 400; font-size: 1.3rem;">
-                <a href="https://calirpnsa.tech">calirpnsa.tech</a> is currently under construction, please check back later or contact zep#0012 on Discord.<br>
-                ༼ つ ◕_◕ ༽つ
+            <p style="font-family: 'Teko', sans-serif; font-weight: 400; font-size: 1.5rem;">
+                <a href="https://calirpnsa.tech">calirpnsa.tech</a> is currently under construction, please contact zep#0012 with questions.<br>
+                ༼ つ ◕_◕ ༽つ<br>
             </p>
+            <p id="countdown" style="font-family: 'Teko', sans-serif; font-weight: 400; font-size: 1.7rem;"></p>
         </div>
+
+        <script>
+            var countDownDate = new Date("Mar 18, 2022 00:00:00").getTime();
+            var x = setInterval(function(){
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                var days = Math.floor(distance / (86400000));
+                var hours = Math.floor((distance % (86400000)) / (3600000));
+                var minutes = Math.floor((distance % (3600000)) / (60000));
+                var seconds = Math.floor((distance % (60000)) / 1000);
+                document.getElementById("countdown").innerHTML = "Time until launch: "+days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        </script>
     </body>
 </html>
