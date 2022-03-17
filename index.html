@@ -3,42 +3,61 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Temporarily Unavailable </title>
+        <title>National Security Agency - Home</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet">
-        <style>
-            * {user-select: none;}
-            a:link, a:visited {color: black;}
-        </style>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="/assets/NSA-logo.svg" type="image/x-icon">
     </head>
     <body>
-        <div style="width: 40%; margin: auto; margin-top: 100px; text-align: center;">
-            <h1 style="font-family: 'Teko', sans-serif; font-weight: 600">This site is currently unavailable</h1>
-            <p style="font-family: 'Teko', sans-serif; font-weight: 400; font-size: 1.5rem;">
-                <a href="https://calirpnsa.tech">calirpnsa.tech</a> is currently under construction, please contact zep#0012 with questions.<br>
-                ༼ つ ◕_◕ ༽つ<br>
+        <header>
+            <a href="index.html" class="home"><img src="/assets/NSA-logo.svg" height="96"></a>
+            <a href="index.html" class="home"><span id="name"">National Security Agency</span></a>
+            <ul class="navbar">
+                <li>
+                    <a class="link" href="info.html">Info</a>
+                </li>
+                <span class="separator">|</span>
+                <li>
+                    <a class="link" href="about.html">About</a>
+                </li>
+            </ul>
+        </header>
+        <div class="home-content">
+            <p id="home-content-header">
+                Assessing potential threats.<br>
+                Ensuring peace.<br>
+                Securing the future.
             </p>
-            <p id="countdown" style="font-family: 'Teko', sans-serif; font-weight: 400; font-size: 1.7rem;"></p>
+            <span id="home-description">Using complex tools and technology, we protect national security and ensure the future for the next generation of America.<br><br></span>
+            <a class="link" id="apply" href="application.html">Apply</a>
         </div>
-
+        <div class="cyber-stuff">
+            <div class="top-section">
+                <h1>SIGINT</h1>
+                <p>
+                    Signals intelligence (SIGINT) is our main goal. We provide intelligence to both state and federal departments, at any time, for anyone who needs it. Out of everything we do, the most important is conveying information in a timely and accurate manner to other departments.
+                </p>
+            </div>
+            <div class="middle-section">
+                <img src="/assets/mission_icon.png">
+            </div>
+            <div class="bottom-section">
+                <h1>Cybersecurity</h1>
+                <p>
+                    The NSA partners with departments to prevent and eradicate any and all threats to computer systems citywide. We use complex techiques and technologies to restrict unauthorized access to systems.
+                </p>
+            </div>
+        </div>
+        <footer class="global-footer">
+            <p>
+                This website is not owned nor operated by the National Security Agency<br>
+                Made with ༼ つ ◕_◕ ༽つ by zep#0012<br>
+                <img src="/assets/NSA-logo.svg" height="64">
+            </p>
+        </footer>
         <script>
-            var countDownDate = new Date("Mar 18, 2022 00:00:00").getTime();
-            var x = setInterval(function(){
-                var now = new Date().getTime();
-                var distance = countDownDate - now;
-                var days = Math.floor(distance / (86400000));
-                var hours = Math.floor((distance % (86400000)) / (3600000));
-                var minutes = Math.floor((distance % (3600000)) / (60000));
-                var seconds = Math.floor((distance % (60000)) / 1000);
-                document.getElementById("countdown").innerHTML = "Time until launch: "+days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "EXPIRED";
-                }
-            }, 1000);
+            location.href = "update.html";
         </script>
     </body>
 </html>
