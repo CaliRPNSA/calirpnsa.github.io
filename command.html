@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>NSA Command Panel</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h3>Nothing here for now...</h3>
+    </body>
+    <script>
+        let command = ['399612655750348802', '623614262237069312', '637899321219743749', '406289195917770763', '399612655750348802', '457605455968075778', '322903939140026379'] // command staff
+
+        window.onload = () => {
+            const fragment = new URLSearchParams(window.location.hash.slice(1));
+            const id = fragment.get('id');
+
+            for (let i = 0; i < command.length; i++) {
+                if (id === command[i]) {
+                    continue;
+                }
+                else if (i === command.length-1) {
+                    window.location.href = "/index.html"
+                }
+            }
+        }
+    </script>
+</html>

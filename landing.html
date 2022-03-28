@@ -19,12 +19,11 @@
             <h2>NSA Supervisor / Command Portal -- Unfinished</h2>
         </div>
         
-        <a id="login" href="https://discord.com/api/oauth2/authorize?client_id=954128992405966918&redirect_uri=http%3A%2F%2F127.0.0.1%3A5500%2Fcommand%2Flanding.html&response_type=token&scope=identify">Log in with Discord</a>
+        <a id="login" href="https://discord.com/api/oauth2/authorize?client_id=954128992405966918&redirect_uri=https%3A%2F%2Fcalirpnsa.tech%2Flanding.html&response_type=token&scope=identify">Log in with Discord</a>
         <script>
-            // Not in use for right now
+            let command = ['399612655750348802', '623614262237069312', '637899321219743749', '406289195917770763', '399612655750348802', '457605455968075778', '322903939140026379'] // command staff
             window.onload = () => {
-                const command = [399612655750348802, 623614262237069312, 637899321219743749, 406289195917770763, 399612655750348802, 457605455968075778, 322903939140026379] // command staff
-                
+
                 const fragment = new URLSearchParams(window.location.hash.slice(1));
                 const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
 
@@ -37,8 +36,11 @@
                 .then(response => {
                     const { id } = response;
                     for (let i = 0; i < command.length; i++) {
-                        if (id === command[i]) {
-                            // do jack shit for right now
+                        if (id.toString() === command[i]) {
+                            window.location.href = `/command.html#id=${id}`;
+                        }
+                        else if (i === command.length-1) {
+                            window.location.href = "/index.html"
                         }
                     }
                 })
