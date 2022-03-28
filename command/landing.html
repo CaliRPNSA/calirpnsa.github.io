@@ -22,13 +22,13 @@
     </head>
     <body>
         <div id="portal">
-            <h1>NSA Admin Portal</h1>
+            <h1>NSA Supervisor / Command Portal</h1>
             <h2>Unfinished</h2>
         </div>
         
         <a id="login" href="https://discord.com/api/oauth2/authorize?client_id=954128992405966918&redirect_uri=http%3A%2F%2F127.0.0.1%3A5500%2Flanding.html&response_type=token&scope=identify">Log in with Discord</a>
         <script>
-            // Not in Use
+            // Not in use for right now
             window.onload = () => {
                 const command = [399612655750348802, 623614262237069312, 637899321219743749, 406289195917770763, 399612655750348802, 457605455968075778, 322903939140026379]
 
@@ -46,22 +46,15 @@
                 })
                     .then(result => result.json())
                     .then(response => {
-                        console.log(response);
                         const { id } = response;
-                        console.log(id);
                         for (let i = 0; i < command.length; i++) {
                             if (id === command[i]) {
                                 document.getElementsByID('login').style.visibility = 'hidden';
                                 document.getElementsByClassName('portal').style.visibility = 'visible';
                             }
-                            else {
-                                if (i === command.length - 1 && accessToken) {
-                                    alert ("You are not authorized to use this portal.");
-                                }
-                            }
                         }
                     })
-                    .catch();
+                    .catch(console.error());
             }
         </script>
     </body>
